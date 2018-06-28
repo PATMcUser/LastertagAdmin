@@ -3,6 +3,7 @@ package de.psc.Lasertag.GUI;
 import com.codename1.components.MultiButton;
 import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
+import com.codename1.components.ToastBar;
 import com.codename1.io.FileSystemStorage;
 import com.codename1.ui.*;
 import com.codename1.ui.Button;
@@ -16,9 +17,7 @@ import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.GenericListCellRenderer;
 import com.codename1.ui.list.MultiList;
-import de.psc.Lasertag.Game.Game;
-import de.psc.Lasertag.Game.Player;
-import de.psc.Lasertag.Game.Team;
+import de.psc.Lasertag.Game.*;
 import de.psc.Lasertag.LaserTagAdministrator;
 
 import java.awt.Color;
@@ -278,6 +277,50 @@ public class UpdateTabGUI {
         container_scores.setScrollableY(true);
         container_scores.setScrollVisible(true);
 
+        for(Score score:LTA.selGame.getScores()){
+            MultiButton threeLinesButton = new MultiButton(score.getName());
+            threeLinesButton.setTextLine2("" + score.getValue());
+            threeLinesButton.setTextLine3(score.getDescription());
+            threeLinesButton.setEnabled(score.isEditable());
+            threeLinesButton.setVisible(score.isVisible());
+            threeLinesButton.setSelected(score.isUsed());
+
+            if (score.isUsed()==true)
+                container_scores.addComponent(threeLinesButton);
+
+            threeLinesButton.addActionListener(
+                    eScor -> {
+                        String name=((MultiButton)eScor.getActualComponent()).getTextLine1();
+                        String desc=((MultiButton)eScor.getActualComponent()).getTextLine3();
+                        Score selSc = null;
+                        for(Score sc:LTA.selGame.getScores()){
+                            if (sc.getName().equals(name) &&
+                                    sc.getDescription().equals(desc)){
+                                selSc = sc;
+                                break;
+                            }
+                        }
+
+                        if (selSc == null) return;
+
+                        Dialog d =new Dialog();
+                        d.setLayout( new BorderLayout() );
+                        d.setBlurBackgroundRadius(8);
+                        Container mainCont=BoxLayout.encloseY();
+                        d.add(new SpanLabel(name));
+                        d.add(new SpanLabel(desc));
+                        d.add(BorderLayout.CENTER, mainCont);
+
+                        Button close = new Button("Close");
+                        close.addActionListener(e2 -> {
+                            d.dispose();
+                        });
+                        d.add(BorderLayout.SOUTH, close);
+                        d.show();
+
+                    });
+        }
+
     }
 
 
@@ -287,6 +330,93 @@ public class UpdateTabGUI {
         container_goals.removeAll();
         container_goals.setScrollableY(true);
         container_goals.setScrollVisible(true);
+
+        boolean condition=false;
+
+        for(Goal goal:LTA.selGame.getGoals()) {
+            MultiButton threeLinesButton = new MultiButton(goal.getName());
+            threeLinesButton.setCheckBox(true);
+            threeLinesButton.setSelected(goal.isUsed());
+            threeLinesButton.setVisible(goal.isVisible());
+            //threeLinesButton.setEnabled(goal.isEditable());
+            threeLinesButton.setTextLine2(goal.getDescription());
+            condition=condition||goal.isUsed();
+
+            //if (goal.isUsed())
+            container_goals.addComponent(threeLinesButton);
+
+            if (goal.isEditable())
+                threeLinesButton.addActionListener(
+                        eMutator -> {
+                            String name = ((MultiButton) eMutator.getActualComponent()).getTextLine1();
+                            String desc = ((MultiButton) eMutator.getActualComponent()).getTextLine2();
+                            Goal selGo = null;
+                            for (Goal go : LTA.selGame.getGoals()) {
+                                if (    go.getName().equals(name) &&
+                                        go.getDescription().equals(desc)) {
+                                    selGo = go;
+                                    break;
+                                }
+                            }
+
+                            if (selGo == null) return;
+
+                            Dialog d = new Dialog(selGo.getName());
+                            d.setLayout( new BorderLayout() );
+                            d.setBlurBackgroundRadius(8);
+
+
+                            Container mainCont= BoxLayout.encloseY();
+                            mainCont.add(new SpanLabel(selGo.getDescription()));
+                            Container sel=new Container( new BorderLayout());
+
+                            Button minus = new Button("-");
+                            TextField value = new TextField(""+selGo.getValue());
+                            Button plus = new Button("+");
+
+                            Goal finalSelGo1 = selGo;
+                            minus.addActionListener(bMin->{
+                                finalSelGo1.setValue(finalSelGo1.getValue()-1);
+                                value.setText(""+finalSelGo1.getValue());
+                            });
+                            plus.addActionListener(bPls->{
+                                finalSelGo1.setValue(finalSelGo1.getValue()+1);
+                                value.setText(""+finalSelGo1.getValue());
+                            });
+
+                            sel.add(BorderLayout.WEST, minus);
+                            sel.add(BorderLayout.CENTER, value);
+                            sel.add(BorderLayout.EAST, plus);
+
+                            CheckBox ch=new CheckBox("Use?" );
+                            ch.setSelected(selGo.isUsed());
+
+
+
+                            ch.setEnabled(goal.isEditable());
+
+
+
+                            Goal finalSelGo = selGo;
+                            ch.addActionListener(eCB->{
+                                finalSelGo.setUsed( ((CheckBox)eCB.getActualComponent()).isSelected() );
+                            });
+
+                            mainCont.add(sel);
+                            mainCont.add(ch);
+                            d.add(BorderLayout.CENTER, mainCont);
+
+                            Button close = new Button("Close");
+                            close.addActionListener(e2 -> {
+                                d.dispose();
+                                UpdateGoals(allContainer,games,LTA);
+                            });
+                            d.add(BorderLayout.SOUTH, close);
+                            d.show();
+
+                        });
+        }
+        if (condition==false) ToastBar.showMessage("You selected no goal" , FontImage.MATERIAL_INFO);
 
     }
 
@@ -298,7 +428,57 @@ public class UpdateTabGUI {
         container_mutators.setScrollableY(true);
         container_mutators.setScrollVisible(true);
 
-        container_mutators.add(new SpanLabel("Clicked " + LTA.selGame.getName()));
+        for(Mutator mutator:LTA.selGame.getMutators()){
+            MultiButton threeLinesButton = new MultiButton(mutator.getName());
+            threeLinesButton.setCheckBox(true);
+            threeLinesButton.setSelected(mutator.isUsed());
+            threeLinesButton.setVisible(mutator.isVisible());
+            threeLinesButton.setEnabled(mutator.isEditable());
+            threeLinesButton.setTextLine2(mutator.getDescription());
+
+            //if (mutator.isUsed())
+            container_mutators.addComponent(threeLinesButton);
+
+            threeLinesButton.addActionListener(
+                    eMutator -> {
+                        String name=((MultiButton)eMutator.getActualComponent()).getTextLine1();
+                        String desc=((MultiButton)eMutator.getActualComponent()).getTextLine2();
+                        threeLinesButton.setSelected(!threeLinesButton.isSelected());
+                        Mutator selMut = null;
+                        for(Mutator sc:LTA.selGame.getMutators()){
+                            if (sc.getName().equals(name) &&
+                                    sc.getDescription().equals(desc)){
+                                selMut = sc;
+                                break;
+                            }
+                        }
+
+                        if (selMut == null) return;
+
+                        Dialog d =new Dialog( selMut.getName() );
+                        d.setLayout( new BorderLayout() );
+                        d.setBlurBackgroundRadius(8);
+                        Container mainCont=BoxLayout.encloseY();
+                        mainCont.add(new SpanLabel(selMut.getDescription()));
+                        CheckBox ch=new CheckBox("Use?" );
+                        ch.setSelected(selMut.isUsed());
+                        Mutator finalSelMut = selMut;
+                        ch.addActionListener(eCB->{
+                            finalSelMut.setUsed( ((CheckBox)eCB.getActualComponent()).isSelected() );
+                        });
+                        mainCont.add(ch);
+                        d.add(BorderLayout.CENTER, mainCont);
+
+                        Button close = new Button("Close");
+                        close.addActionListener(e2 -> {
+                            UpdateMutators(allContainer,games,LTA);
+                            d.dispose();
+                        });
+                        d.add(BorderLayout.SOUTH, close);
+                        d.show();
+
+                    });
+        }
 
     }
 
