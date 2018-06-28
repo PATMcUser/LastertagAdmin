@@ -148,11 +148,12 @@ public class LaserTagAdministrator {
 
         tab = new Tabs();
 
+        /*
         int mm = Display.getInstance().convertToPixels(3);
         EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(mm * 3, mm * 4, 0), false);
 
-        Image iconB1 = URLImage.createToStorage(placeholder, "icon1", "http://georgerrmartin.com/gallery/art/dragons05.jpg");
-
+        Image iconB1 = URLImage.createToStorage(placeholder, "icon1", "Triangle_warning_sign.png");
+*/
         //Component data = new Component();
         //Vector<MultiButton> data = new Vector();
 
@@ -290,7 +291,7 @@ public class LaserTagAdministrator {
             });
 
         SpanButton sb = new SpanButton("SpanButton is a composite component (lead component) that looks/acts like a Button but can break lines rather than crop them when the text is very long.");
-        sb.setIcon(iconB1);
+        //sb.setIcon(iconB1);
         tab.addTab("GO", sb );
 
         hi.add(BorderLayout.CENTER, tab);

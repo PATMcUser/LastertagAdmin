@@ -1,9 +1,8 @@
 package de.psc.Lasertag.GUI;
 
-import com.codename1.components.FloatingActionButton;
 import com.codename1.components.MultiButton;
 import com.codename1.components.SpanLabel;
-import com.codename1.components.ToastBar;
+import com.codename1.io.FileSystemStorage;
 import com.codename1.ui.*;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
@@ -15,13 +14,14 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.GenericListCellRenderer;
 import com.codename1.ui.list.MultiList;
-import de.psc.Lasertag.Game.Base;
 import de.psc.Lasertag.Game.Game;
 import de.psc.Lasertag.Game.Player;
 import de.psc.Lasertag.Game.Team;
 import de.psc.Lasertag.LaserTagAdministrator;
 
 import java.awt.Color;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,7 +42,9 @@ public class UpdateTabGUI {
 
         int mm = Display.getInstance().convertToPixels(3);
         EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(mm * 3, mm * 4, 0), false);
-        Image testIcon = URLImage.createToStorage(placeholder, "icon1", "http://georgerrmartin.com/gallery/art/dragons05.jpg");
+        Image testIcon = URLImage.createToStorage(placeholder, "icon1",
+                FileSystemStorage.getInstance().getAppHomePath() +
+                        FileSystemStorage.getInstance().getFileSystemSeparator()+"Triangle_warning_sign.png");
 
         ButtonGroup bg = new ButtonGroup();
         for(Game mod:games){
@@ -114,9 +116,13 @@ public class UpdateTabGUI {
         teamCombo.setRenderer(new GenericListCellRenderer<>(new MultiButton(), new MultiButton()));
 
         for(Team team:LTA.selGame.getTeams()) {
-            int mm = Display.getInstance().convertToPixels(3);
-            EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(mm * 3, mm * 4, 0), false);
-            Image testIcon = URLImage.createToStorage(placeholder, "icon1", "http://georgerrmartin.com/gallery/art/dragons05.jpg");
+            //int mm = Display.getInstance().convertToPixels(3);
+            //EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(mm * 3, mm * 4, 0), false);
+            try {
+                Image testIcon = Image.createImage(FileSystemStorage.getInstance().openInputStream("Triangle_warning_sign.png"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
             teamCombo.addItem(createListEntry(team.getTeamName(), "" + team.getPlayers().size()));
         }
