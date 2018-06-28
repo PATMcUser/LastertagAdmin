@@ -1,6 +1,7 @@
 package de.psc.Lasertag.GUI;
 
 import com.codename1.components.MultiButton;
+import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
 import com.codename1.io.FileSystemStorage;
 import com.codename1.ui.*;
@@ -11,6 +12,7 @@ import com.codename1.ui.Image;
 import com.codename1.ui.TextField;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.GenericListCellRenderer;
 import com.codename1.ui.list.MultiList;
@@ -22,14 +24,17 @@ import de.psc.Lasertag.LaserTagAdministrator;
 import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 
+import static com.codename1.ui.Component.CENTER;
+
 public class UpdateTabGUI {
     public enum GUI_Elements {
-        GAMES, TEAMS, SCORES, GOALS,MUTATORS
+        GAMES, TEAMS, SCORES, GOALS, MUTATORS, GO
     }
 
 
@@ -40,16 +45,10 @@ public class UpdateTabGUI {
         container_games.setScrollableY(true);
         container_games.setScrollVisible(true);
 
-        int mm = Display.getInstance().convertToPixels(3);
-        EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(mm * 3, mm * 4, 0), false);
-        Image testIcon = URLImage.createToStorage(placeholder, "icon1",
-                FileSystemStorage.getInstance().getAppHomePath() +
-                        FileSystemStorage.getInstance().getFileSystemSeparator()+"Triangle_warning_sign.png");
-
         ButtonGroup bg = new ButtonGroup();
         for(Game mod:games){
             MultiButton twoLinesIconCheckBox = new MultiButton(mod.getName());
-            twoLinesIconCheckBox.setIcon(testIcon);
+            twoLinesIconCheckBox.setIcon(mod.getIcon().scaled(LTA.mm * 4, LTA.mm * 4));
             twoLinesIconCheckBox.setRadioButton(true);
             twoLinesIconCheckBox.setTextLine2(mod.getDescription());
             twoLinesIconCheckBox.setGroup(bg);
@@ -58,7 +57,7 @@ public class UpdateTabGUI {
 
         if(LTA.selGame!=null){
             MultiButton twoLinesIconCheckBox = new MultiButton("Last: " + LTA.selGame.getName());
-            twoLinesIconCheckBox.setIcon(testIcon);
+            twoLinesIconCheckBox.setIcon(LTA.selGame.getIcon());
             twoLinesIconCheckBox.setRadioButton(true);
             twoLinesIconCheckBox.setTextLine2(LTA.selGame.getDescription());
             twoLinesIconCheckBox.setGroup(bg);
@@ -79,6 +78,7 @@ public class UpdateTabGUI {
             UpdateTabGUI.UpdateMutators(allContainer, games, LTA);
             UpdateTabGUI.UpdateScores(allContainer, games, LTA);
             UpdateTabGUI.UpdateGames(allContainer, games, LTA);
+            UpdateTabGUI.UpdateGO(allContainer, games, LTA);
 
             LTA.tab.setSelectedIndex(1);
             //ToastBar.showMessage("You selected " + (  games.get(bg.getSelectedIndex()).getName() ), FontImage.MATERIAL_INFO);
@@ -116,13 +116,6 @@ public class UpdateTabGUI {
         teamCombo.setRenderer(new GenericListCellRenderer<>(new MultiButton(), new MultiButton()));
 
         for(Team team:LTA.selGame.getTeams()) {
-            //int mm = Display.getInstance().convertToPixels(3);
-            //EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(mm * 3, mm * 4, 0), false);
-            try {
-                Image testIcon = Image.createImage(FileSystemStorage.getInstance().openInputStream("Triangle_warning_sign.png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
 
             teamCombo.addItem(createListEntry(team.getTeamName(), "" + team.getPlayers().size()));
         }
@@ -242,6 +235,39 @@ public class UpdateTabGUI {
     private static void UpdateTeams_combo (
             Container allContainer, Vector<Game> games, LaserTagAdministrator LTA){
 
+    }
+
+
+    public static void UpdateGO (
+            HashMap<GUI_Elements, Container> allContainer, Vector<Game> games, LaserTagAdministrator LTA){
+        Container container_go = allContainer.get(GUI_Elements.GO);
+        container_go.removeAll();
+        container_go.setScrollableY(false);
+        container_go.setScrollVisible(false);
+        Container b_cont = BoxLayout.encloseY();
+
+        //b_cont.add(LTA.selGame.getIcon().scaled(LTA.mm * 10, LTA.mm * 10));
+        //b_cont.add(new SpanLabel("Start:\n\r"+LTA.selGame.getName()));
+        Image deSat= desaturate(LTA.selGame.getIcon().scaled(LTA.mm * 10, LTA.mm * 10));
+        SpanButton sb = new SpanButton("Start:\n\r"+LTA.selGame.getName());
+        sb.setIcon(deSat);
+        sb.setLayout(new FlowLayout(CENTER));
+        sb.setEnabled(true);
+       // sb.add(b_cont);
+        container_go.add(sb);
+
+    }
+
+    private static Image desaturate(Image scaled) {
+        int[] deSArr = scaled.getRGB();
+        for (int w=0;w<deSArr.length;w++){
+            if((deSArr[w]&0xff000000)==0x00000000)
+                continue;
+            int gray = ( ((deSArr[w]>>0)&0xFF) + ((deSArr[w]>>8)&0xFF) + ((deSArr[w]>>16)&0xFF) ) / 3 ;
+            deSArr[w] = 0xff000000 + (gray<<16) + (gray<<8) + gray;
+        }
+        Image deS = Image.createImage(deSArr, scaled.getWidth(), scaled.getHeight() );
+        return deS;
     }
 
 

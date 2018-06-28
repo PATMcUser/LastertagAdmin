@@ -2,6 +2,7 @@ package de.psc.Lasertag;
 
 
 import com.codename1.components.*;
+import com.codename1.io.FileSystemStorage;
 import com.codename1.io.JSONParser;
 import com.codename1.io.Log;
 import com.codename1.ui.*;
@@ -44,6 +45,8 @@ public class LaserTagAdministrator {
     public Tabs tab;
     public Form hi;
 
+    public int mm;
+
     public void init(Object context) {
         // use two network threads instead of one
         updateNetworkThreadCount(2);
@@ -75,11 +78,13 @@ public class LaserTagAdministrator {
         hi = new Form("LaserTag", new BorderLayout());
         //hi.add(new Label("Hi World"));
 
+        this.mm = Display.getInstance().convertToPixels(3);
+
 
         //TODO: list of games!
 
         Vector<Game> games = new Vector();
-
+        EncodedImage placeholder = EncodedImage.createFromImage(Image.createImage(this.mm * 3, this.mm * 4, 0), false);
 
         JSONParser json = new JSONParser();
         try(Reader r = new InputStreamReader(Display.getInstance().getResourceAsStream(getClass(), "/Mods.json"), "UTF-8")) {
@@ -91,6 +96,12 @@ public class LaserTagAdministrator {
                 String gameDescription = ((String) obj.get("Description"))==null?"":((String) obj.get("Description"));
 
                 Game g = new Game(gameName,gameDescription);
+                Image img = Image.createImage(
+                        Display.getInstance().getResourceAsStream(getClass(),
+                                 ((String) obj.get("Image"))==null?"":"/" +((String) obj.get("Image")))
+                );
+                g.setIcon(img);
+
 
                 //Scores
                 java.util.List<Map<String, Object>> scores = (java.util.List<Map<String, Object>>) obj.get("Scores");
@@ -162,6 +173,7 @@ public class LaserTagAdministrator {
         Container container_scores = BoxLayout.encloseY();
         Container container_goals = BoxLayout.encloseY();
         Container container_mutators = BoxLayout.encloseY();
+        Container container_go = BoxLayout.encloseY();
 
         HashMap<UpdateTabGUI.GUI_Elements, Container> allContainer = new HashMap<UpdateTabGUI.GUI_Elements, Container>();
         allContainer.put(UpdateTabGUI.GUI_Elements.GAMES, container_games);
@@ -169,6 +181,7 @@ public class LaserTagAdministrator {
         allContainer.put(UpdateTabGUI.GUI_Elements.SCORES, container_scores);
         allContainer.put(UpdateTabGUI.GUI_Elements.GOALS, container_goals);
         allContainer.put(UpdateTabGUI.GUI_Elements.MUTATORS, container_mutators);
+        allContainer.put(UpdateTabGUI.GUI_Elements.GO, container_go);
 
         UpdateTabGUI.UpdateGames(allContainer, games, this);
 
@@ -177,6 +190,7 @@ public class LaserTagAdministrator {
         tab.addTab("Mutators", container_mutators);
         tab.addTab("Scores", container_scores);
         tab.addTab("Goals", container_goals);
+        tab.addTab("GO", container_go);
 
 
         FloatingActionButton fab = FloatingActionButton.createFAB(FontImage.MATERIAL_ADD);
@@ -289,10 +303,6 @@ public class LaserTagAdministrator {
                         fab.setVisible(true);
                 }
             });
-
-        SpanButton sb = new SpanButton("SpanButton is a composite component (lead component) that looks/acts like a Button but can break lines rather than crop them when the text is very long.");
-        //sb.setIcon(iconB1);
-        tab.addTab("GO", sb );
 
         hi.add(BorderLayout.CENTER, tab);
 

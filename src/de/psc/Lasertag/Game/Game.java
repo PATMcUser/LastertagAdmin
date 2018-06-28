@@ -1,5 +1,6 @@
 package de.psc.Lasertag.Game;
 
+import com.codename1.ui.Image;
 import com.sun.xml.internal.ws.policy.PolicyMapMutator;
 
 import java.util.Vector;
@@ -7,6 +8,17 @@ import java.util.Vector;
 public class Game  implements Cloneable {
     private String name;
     private String description;
+
+    public Image getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Image testIcon) {
+        this.icon = testIcon;
+    }
+
+    private Image icon;
+
     public Vector<Team> teams = new Vector();
 
     private Vector<Goal>  goals = new Vector();
