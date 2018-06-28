@@ -2,7 +2,7 @@
   {
     "Name": "Virus",
     "Description": "Shootet Players change the Team, get all Players in your Team",
-    "Image": "Triangle_warning_sign.png",
+    "Image": "virus.png",
     "Goals": [
       {
         "Name": "Score",
@@ -124,7 +124,7 @@
   {
     "Name": "Capture The Flag",
     "Description": "Bring the opposite Teams Flag to your Base",
-    "Image": "Stop_sign.png",
+    "Image": "ctf.png",
     "Goals": [
       {
         "Name": "Score",
@@ -259,7 +259,7 @@
   {
     "Name": "Free for All",
     "Description": "Ultimate Deathmatch",
-    "Image": "Stop_sign.png",
+    "Image": "DM.png",
     "Goals": [
       {
         "Name": "Score",
@@ -405,7 +405,7 @@
   {
     "Name": "Team Match",
     "Description": "Ultimate Team Deathmatch",
-    "Image": "Triangle_warning_sign.png",
+    "Image": "TDM.png",
     "Goals": [
       {
         "Name": "Score",
@@ -549,7 +549,7 @@
   {
     "Name": "Reactor",
     "Description": "Destroy the enemy Reactor",
-    "Image": "Triangle_warning_sign.png",
+    "Image": "reactor.png",
     "Goals": [
       {
         "Name": "Score",

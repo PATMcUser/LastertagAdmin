@@ -1,8 +1,8 @@
 [
   {
     "Name": "Virus",
-    "Description": "Shootet Players change the Team, get all Players in your Team",
-    "Image": "Triangle_warning_sign.png",
+    "Description": "Shootet Players change the Team,\r\n get all Players in your Team",
+    "Image": "virus.png",
     "Goals": [
       {
         "Name": "Score",
@@ -124,12 +124,12 @@
   {
     "Name": "Capture The Flag",
     "Description": "Bring the opposite Teams Flag to your Base",
-    "Image": "Stop_sign.png",
+    "Image": "ctf.png",
     "Goals": [
       {
         "Name": "Score",
         "Description": "Reach the Teamscore",
-        "default": false,
+        "default": true,
         "visible": true,
         "enable": true,
         "Value": 10000
@@ -259,12 +259,12 @@
   {
     "Name": "Free for All",
     "Description": "Ultimate Deathmatch",
-    "Image": "Stop_sign.png",
+    "Image": "DM.png",
     "Goals": [
       {
         "Name": "Score",
         "Description": "Reach the Teamscore",
-        "default": false,
+        "default": true,
         "visible": true,
         "enable": true,
         "Value": 10000
@@ -405,12 +405,12 @@
   {
     "Name": "Team Match",
     "Description": "Ultimate Team Deathmatch",
-    "Image": "Triangle_warning_sign.png",
+    "Image": "TDM.png",
     "Goals": [
       {
         "Name": "Score",
         "Description": "Reach the Teamscore",
-        "default": false,
+        "default": true,
         "visible": true,
         "enable": true,
         "Value": 10000
@@ -549,12 +549,12 @@
   {
     "Name": "Reactor",
     "Description": "Destroy the enemy Reactor",
-    "Image": "Triangle_warning_sign.png",
+    "Image": "reactor.png",
     "Goals": [
       {
         "Name": "Score",
         "Description": "Reach the Teamscore",
-        "default": false,
+        "default": true,
         "visible": true,
         "enable": true,
         "Value": 10000
