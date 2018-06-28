@@ -1,7 +1,7 @@
 [
   {
     "Name": "Virus",
-    "Description": "Shootet Players change the Team,\r\n get all Players in your Team",
+    "Description": "Shootet Players change the Team, get all Players in your Team",
     "Image": "virus.png",
     "Goals": [
       {

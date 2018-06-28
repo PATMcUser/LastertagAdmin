@@ -1,11 +1,10 @@
 package de.psc.Lasertag.Game;
 
-import java.awt.*;
 import java.util.Vector;
 
-public class Team {
+public class Team extends Base implements Cloneable{
 
-    public Color color;
+    public int color;
     public String teamName;
     public Vector<Player> players = new Vector();
     public Vector<Base> bases = new Vector();
@@ -20,11 +19,11 @@ public class Team {
         this.id = id;
     }
 
-    public Color getColor() {
+    public int getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(int color) {
         this.color = color;
     }
 
@@ -69,7 +68,7 @@ public class Team {
         this.game = game;
     }
 
-    public Team (String name, Color color){
+    public Team (String name, int color){
         this.teamName = name;
         this.color = color;
     }
@@ -96,5 +95,9 @@ public class Team {
             ba.sendStat();
         }
 
+    }
+
+    public Base clone() {
+        return this;
     }
 }

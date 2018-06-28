@@ -1,6 +1,8 @@
 package de.psc.Lasertag.Game;
 
-public class Score {
+import java.util.Vector;
+
+public class Score implements Cloneable{
     private String name;
     private String description;
     private boolean editable;
@@ -84,5 +86,11 @@ public class Score {
 
     public int getTotalVal(){
         return this.used ?this.value:0;
+    }
+
+
+    public Score clone() {
+        Score newG = new Score(this.name, this.description, this.editable, this.used, this.visible, this.value);
+        return newG;
     }
 }

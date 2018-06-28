@@ -2,7 +2,6 @@ package de.psc.Lasertag;
 
 
 import com.codename1.components.*;
-import com.codename1.io.FileSystemStorage;
 import com.codename1.io.JSONParser;
 import com.codename1.io.Log;
 import com.codename1.ui.*;
@@ -21,7 +20,6 @@ import de.psc.Lasertag.GUI.UpdateTabGUI;
 import de.psc.Lasertag.Game.*;
 import javafx.util.Pair;
 
-import java.awt.*;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
@@ -208,18 +206,18 @@ public class LaserTagAdministrator {
                     d.setBlurBackgroundRadius(8);
                     Container disp = BoxLayout.encloseY();
 
-                    Vector<Color> baseColors = new Vector();
+                    Vector<Integer> baseColors = new Vector();
                     baseColors.add(this.selTeam.getColor());
-                    baseColors.add(new Color(0x000000));
-                    baseColors.add(new Color(0xFF0000));
-                    baseColors.add(new Color(0xFFFF00));
-                    baseColors.add(new Color(0xFFFFFF));
+                    baseColors.add(0x000000);
+                    baseColors.add(0xFF0000);
+                    baseColors.add(0xFFFF00);
+                    baseColors.add(0xFFFFFF);
 
                     ComboBox col_comb = new ComboBox<>();
                     col_comb.setRenderer(new GenericListCellRenderer<>(new MultiButton(), new MultiButton()));
-                    for (Color col : baseColors) {
+                    for (int col : baseColors) {
                         //Image testIcon = URLImage.createToStorage(placeholder, "icon1", "http://georgerrmartin.com/gallery/art/dragons05.jpg");
-                        col_comb.addItem(UpdateTabGUI.createListEntry("" + col.getRGB(), col.getRGB()));
+                        col_comb.addItem(UpdateTabGUI.createListEntry("" + col, col));
                     }
                     col_comb.setSelectedIndex(0);
 
@@ -248,17 +246,17 @@ public class LaserTagAdministrator {
 
                     disp.add(teamNameField);
 
-                    Vector<Color> baseColors = new Vector();
-                    baseColors.add(new Color(0x000000));
-                    baseColors.add(new Color(0xFF0000));
-                    baseColors.add(new Color(0xFFFF00));
-                    baseColors.add(new Color(0xFFFFFF));
+                    Vector<Integer> baseColors = new Vector();
+                    baseColors.add(0x000000);
+                    baseColors.add(0xFF0000);
+                    baseColors.add(0xFFFF00);
+                    baseColors.add(0xFFFFFF);
 
                     ComboBox col_comb = new ComboBox<>();
                     col_comb.setRenderer(new GenericListCellRenderer<>(new MultiButton(), new MultiButton()));
-                    for (Color col : baseColors) {
+                    for (int col : baseColors) {
                         //Image testIcon = URLImage.createToStorage(placeholder, "icon1", "http://georgerrmartin.com/gallery/art/dragons05.jpg");
-                        col_comb.addItem(UpdateTabGUI.createListEntry("" + col.getRGB(), col.getRGB()));
+                        col_comb.addItem(UpdateTabGUI.createListEntry("" + col, col));
                     }
                     col_comb.addActionListener(
                             e2 -> {

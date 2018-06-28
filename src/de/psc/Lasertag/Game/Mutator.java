@@ -4,7 +4,7 @@ import javafx.util.Pair;
 
 import java.util.Vector;
 
-public class Mutator {
+public class Mutator implements Cloneable{
 
     private Vector<Pair<String, Integer>> varset= new Vector();
     private String name;
@@ -81,5 +81,11 @@ public class Mutator {
         this.used=use;
         this.visible=vis;
         this.editable=ena;
+    }
+
+    public Mutator clone() {
+        Mutator newM = new  Mutator(this.name, this.description, this.used, this.visible, this.editable);
+        newM.setVarset((Vector<Pair<String, Integer>>) varset.clone());
+        return newM;
     }
 }

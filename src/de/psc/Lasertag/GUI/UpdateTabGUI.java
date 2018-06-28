@@ -20,10 +20,6 @@ import com.codename1.ui.list.MultiList;
 import de.psc.Lasertag.Game.*;
 import de.psc.Lasertag.LaserTagAdministrator;
 
-import java.awt.Color;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -98,7 +94,7 @@ public class UpdateTabGUI {
         if(LTA.selGame.getTeams().size()==0) {
             String[] tnames = {"Bunnys", "Pussys", "Brooos"};
             for (String tname : tnames) {
-                Team t = new Team(tname, new Color((0xFF0000 >> (4 * LTA.selGame.getTeams().size())) ));
+                Team t = new Team(tname, (0xFF0000 >> (4 * LTA.selGame.getTeams().size())) );
                 for (int j = 0; j < 5; j++) {
                     Player p = new Player();
                     p.setTeam(t);

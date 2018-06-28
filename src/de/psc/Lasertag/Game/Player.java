@@ -2,7 +2,7 @@ package de.psc.Lasertag.Game;
 
 import de.psc.Lasertag.Naming;
 
-public class Player {
+public class Player  implements Cloneable{
     private Team team;
     private String name;
     private int score;

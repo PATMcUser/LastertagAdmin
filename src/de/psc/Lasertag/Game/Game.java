@@ -1,7 +1,6 @@
 package de.psc.Lasertag.Game;
 
 import com.codename1.ui.Image;
-import com.sun.xml.internal.ws.policy.PolicyMapMutator;
 
 import java.util.Vector;
 
@@ -16,6 +15,7 @@ public class Game  implements Cloneable {
     public void setIcon(Image testIcon) {
         this.icon = testIcon;
     }
+
 
     private Image icon;
 
@@ -259,17 +259,27 @@ public class Game  implements Cloneable {
         this.description= description;
     }
 
-    @Override
-    public Game clone()
-    {
-        try
-        {
-            return (Game) super.clone();
-        }
-        catch ( CloneNotSupportedException e ) {
-            // Kann eigentlich nicht passieren, da Cloneable
-            throw new InternalError();
-        }
+
+    public Game clone() {
+        Game newG = new Game(this.name, this.description);
+        newG.setPlayerPerTeamMin(this.playerPerTeamMin);
+        newG.setBasePerTeamMin(this.basePerTeamMin);
+        newG.setBasePerTeamMax(this.basePerTeamMax);
+        newG.setIcon(this.icon);
+        newG.setGoals((Vector<Goal>) this.goals.clone());
+        for(Goal objG:newG.getGoals()) objG.setGame(newG);
+        newG.setMutators((Vector<Mutator>) this.mutators.clone());
+        for(Mutator objM:newG.getMutators()) objM.setGame(newG);
+        newG.setScores((Vector<Score>) this.scores.clone());
+        for(Score objS:newG.getScores()) objS.setGame(newG);
+        newG.setTeams(this.teams);
+        for(Team objT:newG.getTeams()) objT.setGame(newG);
+        newG.sortMe();
+        return newG;
+    }
+
+    public void sortMe(){
+        //TODO: sortiere Goals, Scores und Mutators
     }
 
 }
