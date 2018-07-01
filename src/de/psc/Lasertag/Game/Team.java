@@ -2,7 +2,7 @@ package de.psc.Lasertag.Game;
 
 import java.util.Vector;
 
-public class Team extends Base implements Cloneable{
+public class Team extends Base {
 
     public int color;
     public String teamName;
@@ -97,7 +97,4 @@ public class Team extends Base implements Cloneable{
 
     }
 
-    public Base clone() {
-        return this;
-    }
 }

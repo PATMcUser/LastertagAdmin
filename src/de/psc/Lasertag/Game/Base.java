@@ -1,6 +1,6 @@
 package de.psc.Lasertag.Game;
 
-public class Base  implements Cloneable{
+public class Base {
 
     public enum LEDPattern {
         STATIC, BLINK, RUN, NONE;
@@ -79,7 +79,4 @@ public class Base  implements Cloneable{
 */
     }
 
-    public Base clone() {
-        return this;
-    }
 }

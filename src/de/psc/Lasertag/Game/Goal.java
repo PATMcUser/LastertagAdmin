@@ -1,6 +1,6 @@
 package de.psc.Lasertag.Game;
 
-public class Goal implements Cloneable{
+public class Goal{
     private boolean editable;
     private boolean used;
     private boolean visible;
@@ -89,9 +89,4 @@ public class Goal implements Cloneable{
         return this.used ? val-this.value<=0 :false;
     }
 
-    public Goal clone() {
-        Goal newG = new Goal (this.name, this.description, this.editable, this.used, this.visible, this.value);
-        newG.setGame(this.game);
-        return newG;
-    }
 }

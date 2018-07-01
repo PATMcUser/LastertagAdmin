@@ -2,22 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c9ae684-2d53-437d-9f2e-04afab43d4bc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/SUPPORT/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeNameOneBuildClient.jar" beforeDir="false" afterPath="$PROJECT_DIR$/CodeNameOneBuildClient.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaSE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSE.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Versions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Versions.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/de/psc/Lasertag/GUI/UpdateTabGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/de/psc/Lasertag/GUI/UpdateTabGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codenameone_settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/codenameone_settings.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CLDC11.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CLDC11.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CodenameOne.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CodenameOne.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/CodenameOne_SRC.zip" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CodenameOne_SRC.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/Mods.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/Mods.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/DM.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/DM.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/Stop_sign.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/TDM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/Triangle_warning_sign.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/bombingrun.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/ctf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/GUI/UpdateTabGUI$GUI_Elements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/GUI/UpdateTabGUI$GUI_Elements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/GUI/UpdateTabGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/GUI/UpdateTabGUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Base.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Base.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Goal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Goal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Mutator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Mutator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/Game/Team.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/LaserTagAdministrator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/LaserTagAdministrator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/LaserTagAdministrator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/de/psc/Lasertag/LaserTagAdministrator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/reactor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastertagAdmin/virus.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastertagAdmin/virus.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Base.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Goal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Goal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Mutator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Mutator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java" afterDir="false" />
     </list>
@@ -34,17 +53,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Game.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="272" column="31" selection-start-line="272" selection-start-column="31" selection-end-line="272" selection-end-column="31" />
+            <state relative-caret-position="84">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,36 +68,8 @@
       <file leaf-file-name="Base.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Base.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="81" selection-start-line="81" selection-end-line="83" selection-end-column="5" />
-              <folding>
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#220#221#0" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#654#655#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#740#741#0" expanded="true" />
-                <element signature="e#776#777#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#930#931#0" expanded="true" />
-                <element signature="e#1289#1290#0" expanded="true" />
-                <element signature="e#1316#1317#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="42">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -90,14 +77,8 @@
       <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Team.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-983">
-              <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-              <folding>
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#2078#2079#0" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1470">
+              <caret line="98" selection-start-line="98" selection-end-line="98" />
             </state>
           </provider>
         </entry>
@@ -105,8 +86,8 @@
       <file leaf-file-name="Goal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Goal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-897">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="1218">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -114,8 +95,8 @@
       <file leaf-file-name="Mutator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Mutator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="87" column="71" selection-start-line="87" selection-start-column="71" selection-end-line="87" selection-end-column="71" />
+            <state relative-caret-position="84">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -124,34 +105,28 @@
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LaserTagAdministrator.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LaserTagAdministrator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="357">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mods.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Mods.json">
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/SUPPORT/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state relative-caret-position="609">
+              <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -159,11 +134,20 @@
       <file leaf-file-name="UpdateTabGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="63" column="77" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
+            <state relative-caret-position="1050">
+              <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7077">
+              <caret line="337" selection-start-line="337" selection-end-line="337" />
             </state>
           </provider>
         </entry>
@@ -197,6 +181,8 @@
       <find>ov</find>
       <find>awt</find>
       <find>public game</find>
+      <find>clone</find>
+      <find>toa</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,15 +202,16 @@
         <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Gentest.java" />
         <option value="$PROJECT_DIR$/out/production/LastertagAdmin/Mods.json" />
         <option value="$PROJECT_DIR$/src/Mods.json" />
-        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java" />
-        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java" />
-        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java" />
+        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java" />
+        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Game.java" />
         <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Base.java" />
         <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Team.java" />
         <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Goal.java" />
         <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Mutator.java" />
-        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java" />
-        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Game.java" />
+        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java" />
+        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/SUPPORT/Utils.java" />
+        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java" />
+        <option value="$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java" />
       </list>
     </option>
   </component>
@@ -237,11 +224,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1102" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
+    <option name="width" value="960" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -249,7 +235,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,11 +266,25 @@
               <item name="Lasertag" type="462c0819:PsiDirectoryNode" />
               <item name="Game" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="LastertagAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LastertagAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lasertag" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LastertagAdmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LastertagAdmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Lasertag" type="462c0819:PsiDirectoryNode" />
+              <item name="SUPPORT" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -513,30 +513,33 @@
       <workItem from="1530198980547" duration="152000" />
       <workItem from="1530199447708" duration="2862000" />
       <workItem from="1530209603694" duration="4611000" />
+      <workItem from="1530346877816" duration="9298000" />
+      <workItem from="1530371726399" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116276000" />
+    <option name="totallyTimeSpent" value="125689000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1102" extended-state="0" />
+    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.36392075" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49635416" weight="0.2646086" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50364584" side_tool="true" visible="true" weight="0.26996624" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32846716" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32745314" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24869657" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5063694" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -553,6 +556,38 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="2" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.32745314" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Properties" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.1907387" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2484375" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info id="Nl-Palette" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -566,7 +601,7 @@
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
     <option name="FILTER_TARGETS" value="false" />
     <buildFile url="file://$PROJECT_DIR$/build.xml">
       <targetFilters>
@@ -756,40 +791,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Mutator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1617">
-          <caret line="77" column="11" selection-start-line="77" selection-start-column="11" selection-end-line="77" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Goal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -825,10 +826,6 @@
           <caret line="35" column="28" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -865,12 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1281">
           <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,10 +913,6 @@
           <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -941,12 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -988,13 +969,6 @@
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Scoreing.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml" />
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Names.json" />
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="150" column="49" selection-start-line="150" selection-start-column="49" selection-end-line="150" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Naming.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1031,13 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Mods.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1045,103 +1012,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="63" column="77" selection-start-line="63" selection-start-column="77" selection-end-line="63" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1386">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Score.java">
+    <entry file="file://$PROJECT_DIR$/codenameone_settings.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="462">
+          <caret line="22" column="37" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codenameone_kotlin.properties">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Base.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="81" selection-start-line="81" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#408#409#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#654#655#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#1289#1290#0" expanded="true" />
-            <element signature="e#1316#1317#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="42">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Team.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-983">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#2078#2079#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1470">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Goal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-897">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="1218">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Mutator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="87" column="71" selection-start-line="87" selection-start-column="71" selection-end-line="87" selection-end-column="71" />
+        <state relative-caret-position="84">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/Game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="272" column="31" selection-start-line="272" selection-start-column="31" selection-end-line="272" selection-end-column="31" />
+        <state relative-caret-position="84">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/SUPPORT/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/GUI/UpdateTabGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="76" column="63" selection-start-line="76" selection-start-column="63" selection-end-line="76" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7077">
+          <caret line="337" selection-start-line="337" selection-end-line="337" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/psc/Lasertag/LaserTagAdministrator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

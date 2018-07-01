@@ -4,7 +4,7 @@ import com.codename1.ui.Image;
 
 import java.util.Vector;
 
-public class Game  implements Cloneable {
+public class Game {
     private String name;
     private String description;
 
@@ -257,25 +257,6 @@ public class Game  implements Cloneable {
     public Game(String name, String description){
         this.name= name;
         this.description= description;
-    }
-
-
-    public Game clone() {
-        Game newG = new Game(this.name, this.description);
-        newG.setPlayerPerTeamMin(this.playerPerTeamMin);
-        newG.setBasePerTeamMin(this.basePerTeamMin);
-        newG.setBasePerTeamMax(this.basePerTeamMax);
-        newG.setIcon(this.icon);
-        newG.setGoals((Vector<Goal>) this.goals.clone());
-        for(Goal objG:newG.getGoals()) objG.setGame(newG);
-        newG.setMutators((Vector<Mutator>) this.mutators.clone());
-        for(Mutator objM:newG.getMutators()) objM.setGame(newG);
-        newG.setScores((Vector<Score>) this.scores.clone());
-        for(Score objS:newG.getScores()) objS.setGame(newG);
-        newG.setTeams(this.teams);
-        for(Team objT:newG.getTeams()) objT.setGame(newG);
-        newG.sortMe();
-        return newG;
     }
 
     public void sortMe(){

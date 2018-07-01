@@ -1,0 +1,699 @@
+[
+  {
+    "Name": "Virus",
+    "Description": "Shootet Players change the Team, get all Players in your Team",
+    "Image": "virus.png",
+    "Goals": [
+      {
+        "Name": "Score",
+        "Description": "Reach the Teamscore",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Value": 10000
+      },
+      {
+        "Name": "Time",
+        "Description": "Play until Timelimit",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Value": 72000
+      },
+      {
+        "Name": "minimal Teamsize",
+        "Description": "Play until min Team Size",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 0
+      }
+    ],
+    "Scores" : [
+      {
+        "Name": "Hit",
+        "Description": "Hit a Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 100
+      },
+      {
+        "Name": "Shooted",
+        "Description": "Get Hit by Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Friendly Hit",
+        "Description": "Hit someone of your Team",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Munition",
+        "Description": "Shots in Magazin",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 50
+      },
+      {
+        "Name": "Flag",
+        "Description": "Bring the Flag to your Base",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Return Flag",
+        "Description": "Shoot the Flag carrier",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      }
+    ],
+    "Mutators": [
+          {
+            "Name": "Virus Main",
+            "Description": "",
+            "default": true,
+            "visible": false,
+            "enable": false,
+            "Variables": [
+              {"changeTeam": 1},
+              {"minBases": 0},
+              {"maxBases": -1},
+              {"PlayerPerTeamMin": 1},
+              {"TeamsMin": 2},
+              {"TeamsMax": -1}
+            ]
+          },
+          {
+            "Name": "Reload on Base",
+            "Description": "",
+            "default": false,
+            "visible": true,
+            "enable": true,
+            "Variables": [
+              {"ReloadOnBase": 1},
+              {"LimitMunition": 1},
+              {"MinBase": 1}
+            ]
+          },
+          {
+            "Name": "Friendly Fire",
+            "Description": "",
+            "default": false,
+            "visible": true,
+            "enable": true,
+            "Variables": [
+              {"friendlyFire": 1}
+            ]
+          }
+    ]
+  },
+
+
+  {
+    "Name": "Capture The Flag",
+    "Description": "Bring the opposite Teams Flag to your Base",
+    "Image": "ctf.png",
+    "Goals": [
+      {
+        "Name": "Score",
+        "Description": "Reach the Teamscore",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 10000
+      },
+      {
+        "Name": "Time",
+        "Description": "Play until Timelimit",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Value": 72000
+      }
+    ],
+    "Scores" : [
+      {
+        "Name": "Hit",
+        "Description": "Hit a Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 100
+      },
+      {
+        "Name": "Shooted",
+        "Description": "Get Hit by Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Friendly Hit",
+        "Description": "Hit someone of your Team",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Munition",
+        "Description": "Shots in Magazin",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 50
+      },
+      {
+        "Name": "Flag",
+        "Description": "Bring the Flag to your Base",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Return Flag",
+        "Description": "Shoot the Flag carrier",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Lives",
+        "Description": "Hits until Out",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Value": 1
+      }
+    ],
+    "Mutators": [
+          {
+            "Name": "CTF Main",
+            "Description": "",
+            "default": true,
+            "visible": false,
+            "enable": false,
+            "Variables": [
+              {"changeTeam": 0},
+              {"minBases": 1},
+              {"maxBases": 1},
+              {"PlayerPerTeamMin": 1},
+              {"TeamsMin": 2},
+              {"TeamsMax": -1}
+
+            ]
+          },
+          {
+            "Name": "Reload on Base",
+            "Description": "",
+            "default": false,
+            "visible": true,
+            "enable": true,
+            "Variables": [
+              {"ReloadOnBase": 1},
+              {"LimitMunition": 1},
+              {"MinBase": 1}
+            ]
+          },
+          {
+            "Name": "Health on Base",
+            "Description": "",
+            "default": false,
+            "visible": true,
+            "enable": true,
+            "Variables": [
+              {"HealthOnBase": 1},
+              {"HitPoints": 1},
+              {"MinBase": 1}
+            ]
+          },
+      {
+        "Name": "No Signals",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"DarkGame": 1}
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "Name": "Free for All",
+    "Description": "Ultimate Deathmatch",
+    "Image": "DM.png",
+    "Goals": [
+      {
+        "Name": "Score",
+        "Description": "Reach the Teamscore",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 10000
+      },
+      {
+        "Name": "Time",
+        "Description": "Play until Timelimit",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Value": 72000
+      }
+    ],
+    "Scores" : [
+      {
+        "Name": "Hit",
+        "Description": "Hit a Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 100
+      },
+      {
+        "Name": "Shooted",
+        "Description": "Get Hit by Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Friendly Hit",
+        "Description": "Hit someone of your Team",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Munition",
+        "Description": "Shots in Magazin",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 50
+      },
+      {
+        "Name": "Flag",
+        "Description": "Bring the Flag to your Base",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Return Flag",
+        "Description": "Shoot the Flag carrier",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Lives",
+        "Description": "Hits until Out",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Value": 1
+      }
+    ],
+    "Mutators": [
+      {
+        "Name": "FFA Main",
+        "Description": "",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Variables": [
+          {"changeTeam": 0},
+          {"minBases": -1},
+          {"maxBases": 1},
+          {"PlayerPerTeamMin": 1},
+          {"PlayerPerTeamMax": 1},
+          {"TeamsMin": 2},
+          {"TeamsMax": -1}
+
+        ]
+      },
+      {
+        "Name": "Reload on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"ReloadOnBase": 1},
+          {"LimitMunition": 1},
+          {"BaseForAll": 1}
+        ]
+      },
+      {
+        "Name": "Health on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"HealthOnBase": 1},
+          {"HitPoints": 1},
+          {"BaseForAll": 1}
+        ]
+      },
+      {
+        "Name": "Recover on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"RecoverOnBase": 1}
+        ]
+      },
+      {
+        "Name": "No Signals",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"DarkGame": 1}
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "Name": "Team Match",
+    "Description": "Ultimate Team Deathmatch",
+    "Image": "TDM.png",
+    "Goals": [
+      {
+        "Name": "Score",
+        "Description": "Reach the Teamscore",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 10000
+      },
+      {
+        "Name": "Time",
+        "Description": "Play until Timelimit",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Value": 72000
+      }
+    ],
+    "Scores" : [
+      {
+        "Name": "Hit",
+        "Description": "Hit a Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 100
+      },
+      {
+        "Name": "Shooted",
+        "Description": "Get Hit by Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Friendly Hit",
+        "Description": "Hit someone of your Team",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Munition",
+        "Description": "Shots in Magazin",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 50
+      },
+      {
+        "Name": "Flag",
+        "Description": "Bring the Flag to your Base",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Return Flag",
+        "Description": "Shoot the Flag carrier",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Lives",
+        "Description": "Hits until Out",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Value": 1
+      }
+    ],
+    "Mutators": [
+      {
+        "Name": "TM Main",
+        "Description": "",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Variables": [
+          {"changeTeam": 0},
+          {"minBases": 0},
+          {"maxBases": 1},
+          {"PlayerPerTeamMin": 1},
+          {"PlayerPerTeamMax": -1},
+          {"TeamsMin": 2},
+          {"TeamsMax": -1}
+
+        ]
+      },
+      {
+        "Name": "Reload on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"ReloadOnBase": 1},
+          {"LimitMunition": 1}
+        ]
+      },
+      {
+        "Name": "Health on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"HealthOnBase": 1},
+          {"HitPoints": 1}
+        ]
+      },
+      {
+        "Name": "Recover on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"RecoverOnBase": 1}
+        ]
+      },
+      {
+        "Name": "No Signals",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"DarkGame": 1}
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "Name": "Reactor",
+    "Description": "Destroy the enemy Reactor",
+    "Image": "reactor.png",
+    "Goals": [
+      {
+        "Name": "Score",
+        "Description": "Reach the Teamscore",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 10000
+      },
+      {
+        "Name": "Time",
+        "Description": "Play until Timelimit",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Value": 72000
+      }
+    ],
+    "Scores" : [
+      {
+        "Name": "Hit",
+        "Description": "Hit a Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 100
+      },
+      {
+        "Name": "Shooted",
+        "Description": "Get Hit by Player",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Friendly Hit",
+        "Description": "Hit someone of your Team",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": -25
+      },
+      {
+        "Name": "Munition",
+        "Description": "Shots in Magazin",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 50
+      },
+      {
+        "Name": "Flag",
+        "Description": "Bring the Flag to your Base",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Return Flag",
+        "Description": "Shoot the Flag carrier",
+        "default": true,
+        "visible": true,
+        "enable": true,
+        "Value": 2000
+      },
+      {
+        "Name": "Lives",
+        "Description": "Hits until Out",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Value": 1
+      },
+      {
+        "Name": "Lives of Base",
+        "Description": "Hits until Out",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Value": 25
+      }
+    ],
+    "Mutators": [
+      {
+        "Name": "Reactor Main",
+        "Description": "",
+        "default": true,
+        "visible": false,
+        "enable": true,
+        "Variables": [
+          {"changeTeam": 0},
+          {"minBases": 1},
+          {"maxBases": 1},
+          {"PlayerPerTeamMin": 1},
+          {"PlayerPerTeamMax": -1},
+          {"TeamsMin": 2},
+          {"TeamsMax": -1}
+
+        ]
+      },
+      {
+        "Name": "Reload on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"ReloadOnBase": 1},
+          {"LimitMunition": 1}
+        ]
+      },
+      {
+        "Name": "Health on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"HealthOnBase": 1},
+          {"HitPoints": 1}
+        ]
+      },
+      {
+        "Name": "Recover on Base",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"RecoverOnBase": 1}
+        ]
+      },
+      {
+        "Name": "No Signals",
+        "Description": "",
+        "default": false,
+        "visible": true,
+        "enable": true,
+        "Variables": [
+          {"DarkGame": 1}
+        ]
+      }
+    ]
+  }
+]

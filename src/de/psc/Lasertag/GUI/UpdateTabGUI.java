@@ -19,6 +19,7 @@ import com.codename1.ui.list.GenericListCellRenderer;
 import com.codename1.ui.list.MultiList;
 import de.psc.Lasertag.Game.*;
 import de.psc.Lasertag.LaserTagAdministrator;
+import de.psc.Lasertag.SUPPORT.Utils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,6 +42,19 @@ public class UpdateTabGUI {
         container_games.setScrollVisible(true);
 
         ButtonGroup bg = new ButtonGroup();
+
+        //list of games
+        Utils.parseGames(LTA.getClass(), games);
+
+        if(LTA.selGame!=null){
+            MultiButton twoLinesIconCheckBox = new MultiButton("Last: " + LTA.selGame.getName());
+            twoLinesIconCheckBox.setIcon(LTA.selGame.getIcon().scaled(LTA.mm * 4, LTA.mm * 4));
+            twoLinesIconCheckBox.setRadioButton(true);
+            twoLinesIconCheckBox.setTextLine2(LTA.selGame.getDescription());
+            twoLinesIconCheckBox.setGroup(bg);
+            container_games.addComponent(twoLinesIconCheckBox);
+        }
+
         for(Game mod:games){
             MultiButton twoLinesIconCheckBox = new MultiButton(mod.getName());
             twoLinesIconCheckBox.setIcon(mod.getIcon().scaled(LTA.mm * 4, LTA.mm * 4));
@@ -50,21 +64,12 @@ public class UpdateTabGUI {
             container_games.addComponent(twoLinesIconCheckBox);
         }
 
-        if(LTA.selGame!=null){
-            MultiButton twoLinesIconCheckBox = new MultiButton("Last: " + LTA.selGame.getName());
-            twoLinesIconCheckBox.setIcon(LTA.selGame.getIcon());
-            twoLinesIconCheckBox.setRadioButton(true);
-            twoLinesIconCheckBox.setTextLine2(LTA.selGame.getDescription());
-            twoLinesIconCheckBox.setGroup(bg);
-            container_games.addComponent(twoLinesIconCheckBox);
-        }
-
         bg.addActionListener(e -> {
             try {
-                LTA.selGame = (Game) games.get( bg.getSelectedIndex() ).clone();
+                LTA.selGame = (Game) games.get( bg.getSelectedIndex() - (LTA.selGame==null?0:1));
             } catch (ArrayIndexOutOfBoundsException cat_err){
                 if(LTA.selGame==null) {
-                    LTA.selGame = (Game) games.get(1).clone();
+                    LTA.selGame = (Game) games.get(1);
                 }
             }
 
